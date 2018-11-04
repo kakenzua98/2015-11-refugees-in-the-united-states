@@ -1,0 +1,12 @@
+name: refugee_arrival_data
+title: refugee_arrival_data
+username:
+account: kemi-a
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 551946
+bundleId: 1681359
+url: https://kemi-a.shinyapps.io/refugee_arrival_data/
+when: 1541361035.26084
+asMultiple: FALSE
+asStatic: FALSE

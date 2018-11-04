@@ -1,0 +1,32 @@
+---
+title: "Refugees"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+install.packages("tidytext")
+library(tidytext)
+library(readr)
+library(stringr)
+library(lubridate)
+library(tidyr)
+library(ggplot2)
+```
+
+
+```{r process, warning=FALSE, message=FALSE}
+# load data
+destination <- read_csv("data/refugees-destination-05-15.csv")
+
+destination %>%
+  select(arrivals, year, dest_state) %>% 
+  filter(dest_state %in% c("California","Texas","New York","Florida","Pennsylvania")) %>% 
+  ggplot(aes(x=year, y=arrivals, group = dest_state, color = dest_state)) + geom_jitter() 
+```
+
+
+
+
