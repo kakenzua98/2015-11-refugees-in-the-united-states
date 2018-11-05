@@ -37,7 +37,7 @@ ui <- fluidPage(
 server <- function(input, output) {
    
    output$distPlot <- renderPlot({
-     destination <- read_csv("../data/refugees-destination-05-15.csv")
+     destination <- read_csv("data/refugees-destination-05-15.csv")
      
      destination %>%
      select(arrivals, year, dest_state) %>% 
